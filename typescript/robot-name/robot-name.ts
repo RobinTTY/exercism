@@ -15,15 +15,12 @@ export class Robot {
     const numbersLength = numbers.length;
 
     let result = "";
-    let counter = 0;
-
-    while (counter < 2) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-      counter += 1;
-    }
-    while (counter < this._nameLength) {
-      result += numbers.charAt(Math.floor(Math.random() * numbersLength));
-      counter += 1;
+    for (let i = 0; i < this._nameLength; i++) {
+      if (i < 2)
+        result += characters.charAt(
+          Math.floor(Math.random() * charactersLength)
+        );
+      else result += numbers.charAt(Math.floor(Math.random() * numbersLength));
     }
 
     return result;
