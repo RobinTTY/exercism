@@ -1,7 +1,5 @@
 export class LinkedList<TElement> {
   elements: TElement[];
-  first?: TElement;
-  last?: TElement;
 
   constructor() {
     this.elements = [];
